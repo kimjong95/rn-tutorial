@@ -1,0 +1,13 @@
+/**
+ * 추가 제약 가능한 plugin
+ * - eslint-plugin-import
+ * - eslint-plugin-no-null
+ * - eslint-plugin-jsdoc
+ * - eslint-plugin-prefer-arrow
+ */
+{
+    "extends": ["airbnb", "plugin:prettier/recommended"],
+    "rules": {
+      "prettier/prettier": ["error"]
+    }
+}
