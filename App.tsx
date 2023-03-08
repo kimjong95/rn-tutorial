@@ -1,17 +1,24 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { RecoilRoot } from 'recoil';
+import Generate from './src/Generate';
+import Nav from './src/Nav';
 
 export default function App() {
+  //
+
   return (
-    <View style={styles.mainView}>
-      <View>
-        <Text style={{ backgroundColor: 'red', width: '100%' }}>
-          Text for View1
-        </Text>
+    <RecoilRoot>
+      <View style={styles.mainView}>
+        <Nav />
+        <View style={styles.basicView}>
+          <Text style={styles.basicText}>Text for View1</Text>
+        </View>
+        <View style={styles.basicView}>
+          <Text style={styles.basicText}>Text for View2</Text>
+        </View>
+        <Generate />
       </View>
-      <View>
-        <Text>Text for View2</Text>
-      </View>
-    </View>
+    </RecoilRoot>
   );
 }
 
@@ -22,5 +29,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'skyblue',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
+  },
+  basicView: {
+    backgroundColor: 'green',
+    width: '100%',
+    marginBottom: 5,
+  },
+  basicText: {
+    fontSize: 20,
+    color: '#FFFFFF',
+    textAlign: 'center',
+    padding: 20,
   },
 });
