@@ -1,6 +1,7 @@
 import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import { useRecoilState } from 'recoil';
 import { addingNumberAtom } from './Generate.store';
+import Inputs from './Inputs';
 
 export default function Generate() {
   //
@@ -14,9 +15,10 @@ export default function Generate() {
       //   onHideUnderlay={() => alert('Hide')}
       //   onShowUnderlay={() => alert('Show')}
     >
-      <View style={styles.nav}>
+      {/* <View style={styles.nav}>
         <Text>Add Number</Text>
-      </View>
+      </View> */}
+      <Inputs />
     </TouchableHighlight>
   );
 }
